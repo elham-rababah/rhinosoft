@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "609848317099",
+    "project_id": "rhinosoft-6a352",
+    "storage_bucket": "rhinosoft-6a352.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:609848317099:android:be36934d61e5dd54b753ee",
+        "android_client_info": {
+          "package_name": "com.rhinosoft.pizaaelk"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "609848317099-l20tarfd8echbqcqu0ikmq42h3uu7i53.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.rhinosoft.pizaaelk",
+            "certificate_hash": "67642d779c96d459febf0900d01f5c5095d8fc87"
+          }
+        },
+        {
+          "client_id": "609848317099-sto4o73t4pujpg2h988c4rkuq0gd2juo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDFtaNfDZMFjXxuF5dhGLozMMlo2T5nl2Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "609848317099-sto4o73t4pujpg2h988c4rkuq0gd2juo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
