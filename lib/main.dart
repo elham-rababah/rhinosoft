@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pizaaelk/pages/RootPage.dart';
+import 'package:pizaaelk/providers/products_provider.dart';
 import 'package:provider/provider.dart';
 
 import 'providers/auth_provider.dart';
@@ -20,6 +21,9 @@ class MyApp extends StatelessWidget {
             providers: [
               ChangeNotifierProvider<AuthProvider>(
                 create: (context) => AuthProvider(),
+              ),
+              ChangeNotifierProvider<ProductsProvider>(
+                create: (context) => ProductsProvider(),
               ),
             ],
             child: MaterialApp(

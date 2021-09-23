@@ -44,7 +44,7 @@ class _LandingPageState extends State<LandingPage> {
         controller: pageController,
         children: [
           ProductListPage(),
-          AddProductPage(),
+          AddProductPage(onChange: _changeCurrentTab,),
           AdminPage()
         ],
       ),

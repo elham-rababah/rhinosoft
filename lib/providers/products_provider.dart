@@ -11,14 +11,20 @@ class ProductsProvider with ChangeNotifier {
 
   StreamSubscription _soldItemsStream;
 
+  Future addProduct(Product item, String uid) async {
+    try {
+      item.uid = uid;
+      item.createAt = DateTime.now();
+      await Firestore.instance.collection("products").add(item.toJson());
+    } catch (error) {
+      print(error);
+    }
+  }
 
-
-  void getProducts(String uid) {
+  void getProducts() {
     _soldItemsStream = Firestore.instance
-        .collection("Products")
-        .where("uid", isEqualTo: uid)
+        .collection("products")
         .orderBy('createAt', descending: true)
-        .limit(100)
         .snapshots()
         .listen((QuerySnapshot snapshot) async {
       if (snapshot.documents.length > 0) {
