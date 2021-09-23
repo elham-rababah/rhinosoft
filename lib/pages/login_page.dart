@@ -3,7 +3,7 @@ import 'package:pizaaelk/utils/styles.dart';
 import 'package:pizaaelk/widget/request_button_widget.dart';
 import 'package:provider/provider.dart';
 
-import '../Auth_view_model.dart';
+import '../providers/auth_provider.dart';
 
 class LoginPage extends StatefulWidget {
 
@@ -29,7 +29,7 @@ class _LoginPageState extends State<LoginPage> {
       _isLoading = true;
     });
     try {
-      await Provider.of<AuthViewModel>(context, listen: false)
+      await Provider.of<AuthProvider>(context, listen: false)
           .googleSignIn();
 
 

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:pizaaelk/pages/RootPage.dart';
 import 'package:provider/provider.dart';
 
-import 'Auth_view_model.dart';
+import 'providers/auth_provider.dart';
 
 void main() {
   runApp(MyApp());
@@ -18,8 +18,8 @@ class MyApp extends StatelessWidget {
         builder: (context, orientation) {
           return MultiProvider(
             providers: [
-              ChangeNotifierProvider<AuthViewModel>(
-                create: (context) => AuthViewModel(),
+              ChangeNotifierProvider<AuthProvider>(
+                create: (context) => AuthProvider(),
               ),
             ],
             child: MaterialApp(

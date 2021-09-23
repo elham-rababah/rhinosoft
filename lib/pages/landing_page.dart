@@ -1,8 +1,10 @@
-import 'dart:async';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:pizaaelk/pages/admin_page.dart';
 
-import 'home_page.dart';
+import '../widget/bottom_nav_bar.dart';
+import 'products/add_product_page.dart';
+import 'products/product_list_page.dart';
 
 class LandingPage extends StatefulWidget {
   final int index;
@@ -18,15 +20,20 @@ class _LandingPageState extends State<LandingPage> {
 
   int currentTab = 0;
   PageController pageController;
-  TextEditingController urlController = TextEditingController();
 
 
   @override
   void initState() {
     super.initState();
+    pageController = new PageController(keepPage: true);
 
   }
 
+  @override
+  void dispose() {
+    // TODO: implement dispose
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -36,11 +43,21 @@ class _LandingPageState extends State<LandingPage> {
         physics: NeverScrollableScrollPhysics(),
         controller: pageController,
         children: [
-          HomePage(),
-          // ProfilePage()
+          ProductListPage(),
+          AddProductPage(),
+          AdminPage()
         ],
       ),
-      // bottomNavigationBar: BottomNavBar(currentTab: currentTab,changeIndex: _changeCurrentTab),
+      bottomNavigationBar: BottomNavBar(changeIndex: _changeCurrentTab),
     );
   }
+
+  _changeCurrentTab(int tab) {
+    setState(() {
+      currentTab = tab;
+      pageController.jumpToPage(tab);
+    });
+  }
 }
+
+

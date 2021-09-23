@@ -9,10 +9,10 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 
-import 'model/user_data.dart';
+import '../model/user_data.dart';
 enum APP_STATUS { LOADING, UNAUTHENTICATED, AUTHENTICATED, VERIFIED_AUTHENTICATED }
 
-class AuthViewModel with ChangeNotifier {
+class AuthProvider with ChangeNotifier {
   FirebaseUser user;
   UserData userData;
   StreamSubscription userAuthentication;
@@ -27,7 +27,7 @@ class AuthViewModel with ChangeNotifier {
   String verificationId;
   String error;
 
-  AuthViewModel() {
+  AuthProvider() {
     loadAuthInfo();
   }
 

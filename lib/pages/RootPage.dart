@@ -4,7 +4,7 @@ import 'package:pizaaelk/pages/landing_page.dart';
 import 'package:pizaaelk/pages/login_page.dart';
 import 'package:provider/provider.dart';
 
-import '../Auth_view_model.dart';
+import '../providers/auth_provider.dart';
 
 
 class RootPage extends StatelessWidget {
@@ -22,7 +22,7 @@ class RootPage extends StatelessWidget {
             ? Brightness.light
             : Brightness.dark,
         statusBarBrightness: Theme.of(context).brightness));
-    AuthViewModel authViewModel = Provider.of(context);
+    AuthProvider authViewModel = Provider.of(context);
 
     APP_STATUS status = authViewModel.status;
 
