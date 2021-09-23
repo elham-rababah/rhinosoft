@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:pizaaelk/pages/admin_page.dart';
 
 import '../widget/bottom_nav_bar.dart';
+import 'google_map.dart';
 import 'products/add_product_page.dart';
 import 'products/product_list_page.dart';
 
@@ -45,7 +46,8 @@ class _LandingPageState extends State<LandingPage> {
         children: [
           ProductListPage(),
           AddProductPage(onChange: _changeCurrentTab,),
-          AdminPage()
+          AdminPage(),
+          GoogleMapPage()
         ],
       ),
       bottomNavigationBar: BottomNavBar(changeIndex: _changeCurrentTab),
