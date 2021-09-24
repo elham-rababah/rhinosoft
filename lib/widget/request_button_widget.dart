@@ -17,7 +17,7 @@ class _AppButtonWidgetState extends State<AppButtonWidget> {
       child: Container(
         height: 35,
         decoration: const BoxDecoration(
-          color: Colors.blue,
+          color: Colors.orangeAccent,
           borderRadius: BorderRadius.all(
               Radius.circular(8.0)
           ),

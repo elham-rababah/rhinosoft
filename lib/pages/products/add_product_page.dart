@@ -40,8 +40,6 @@ class _AddProductPageState extends State<AddProductPage> {
   Product item = Product();
   ProductsProvider myProductsProvider;
   AuthProvider authProvider;
-  bool _isLoading = false;
-  bool _isDraft = false;
   List<String> categories = [];
 
   @override
@@ -98,9 +96,7 @@ class _AddProductPageState extends State<AddProductPage> {
                               Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: <Widget>[
-                                  Text("Title",
-                                      ),
-                                  SizedBox(height: 10.0),
+
                                   TextField(
                                     decoration: InputDecoration(
                                       border: OutlineInputBorder(),
@@ -118,9 +114,7 @@ class _AddProductPageState extends State<AddProductPage> {
                                 crossAxisAlignment: CrossAxisAlignment.start,
 
                                 children: <Widget>[
-                                  Text("Description",
-                                  ),
-                                  SizedBox(height: 10.0),
+
                                   TextField(
                                     minLines: 4,
                                     maxLines: 20,
@@ -144,7 +138,7 @@ class _AddProductPageState extends State<AddProductPage> {
                           children: <Widget>[
                             Expanded(
                                 child: AppButtonWidget(
-                                    label: "Save as Draft",
+                                    label: "Add",
 
                                     onPressed: () async {
                                       _validateAndSubmit();

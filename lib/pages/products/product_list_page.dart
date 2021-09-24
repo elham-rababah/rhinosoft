@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:pizaaelk/model/Product.dart';
+import 'package:pizaaelk/pages/products/product_card_Widget.dart';
 import 'package:pizaaelk/providers/products_provider.dart';
 import 'package:provider/provider.dart';
 
@@ -84,43 +85,6 @@ class _ProductListPageState extends State<ProductListPage> {
   }
 }
 
-class ProductWidget extends StatelessWidget {
-
-  final Product product;
-
-  const ProductWidget({Key key, this.product}) : super(key: key);
-  @override
-  Widget build(BuildContext context) {
-    return
-
-      InkWell(
-        onTap: () {
-        },
-        child: Container(
-          padding: EdgeInsets.symmetric(vertical: 30, horizontal: 10),
-          margin: EdgeInsets.symmetric(vertical: 10),
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(14.0),
-            color: Colors.deepOrangeAccent,
-            boxShadow: [
-              BoxShadow(
-                color: Colors.black.withOpacity(0.16),
-                offset: Offset(0, 3.0),
-                blurRadius: 6.0,
-              ),
-            ],
-          ),
-          child: Row(children: [
-            Text(product.description??"")
-          ],),
-        ),
-      );
-
-
-
-
-  }
-}
 
 
 

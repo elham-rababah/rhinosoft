@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pizaaelk/pages/RootPage.dart';
+import 'package:pizaaelk/providers/modifer_provider.dart';
 import 'package:pizaaelk/providers/products_provider.dart';
 import 'package:provider/provider.dart';
 
@@ -25,11 +26,15 @@ class MyApp extends StatelessWidget {
               ChangeNotifierProvider<ProductsProvider>(
                 create: (context) => ProductsProvider(),
               ),
+              ChangeNotifierProvider<ModifierProvider>(
+                create: (context) => ModifierProvider(),
+              ),
             ],
             child: MaterialApp(
               showSemanticsDebugger: false,
               title: 'Pizzea  App',
               initialRoute: '/',
+              theme: ThemeData(accentColor: Colors.grey),
               routes: {'/': (context) => RootPage()},
               debugShowCheckedModeBanner: false,
             ),

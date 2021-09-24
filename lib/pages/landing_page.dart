@@ -1,9 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:pizaaelk/pages/admin_page.dart';
+import 'package:pizaaelk/pages/modifier/add_modifer_page.dart';
 
 import '../widget/bottom_nav_bar.dart';
 import 'google_map.dart';
+import 'modifier/modifier_list.dart';
 import 'products/add_product_page.dart';
 import 'products/product_list_page.dart';
 
@@ -46,7 +47,7 @@ class _LandingPageState extends State<LandingPage> {
         children: [
           ProductListPage(),
           AddProductPage(onChange: _changeCurrentTab,),
-          AdminPage(),
+          ModifierList(),
           GoogleMapPage()
         ],
       ),
